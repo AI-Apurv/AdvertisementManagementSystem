@@ -15,7 +15,10 @@ import { setprofilepic } from '../controller/fileUpload.controller';
 import { addBid } from '../controller/product.controller';
 import { getCategory } from '../controller/category.controller';
 import { EditUserDetails } from '../controller/updateUser.controller';
+import { deleteProduct } from '../controller/deleteProduct.controller';
 const router = express.Router();
+
+
 
 router.post('/signup',signupMiddleware, signup);
 router.post('/login',loginMiddleware,login )
@@ -31,4 +34,5 @@ router.post('/addProduct',addProduct);
 router.get('/getProduct',getProduct)
 router.post('/addBid/:pid',addBid)
 router.get('/getCategory',getCategory)
+router.delete('/deleteProduct',authenticateJWT,deleteProduct)
 export default router;
