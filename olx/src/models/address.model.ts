@@ -1,6 +1,6 @@
 import { sequelize } from "../core/connection";
 import { DataTypes, Model } from "sequelize";
-import Category from "./category.model";
+
 
 class Address extends Model {
     id!: number
@@ -66,6 +66,6 @@ Address.init(
     }
 )
 
-Category.sync({force:true})
+// Address.sync({force:true})
 
 export default Address

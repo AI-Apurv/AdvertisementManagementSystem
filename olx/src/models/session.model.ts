@@ -27,7 +27,7 @@ class Session extends Model {
     sequelize, 
     modelName: 'sessions' 
   });
-  //sequelize.sync({ force: true });
+ // Session.sync({ force: true });
 
 
   

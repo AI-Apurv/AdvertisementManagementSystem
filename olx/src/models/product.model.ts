@@ -71,6 +71,6 @@ Product.init(
     }
 )
 
-Product.sync({force:true})
+//Product.sync({force:true})
 
 export default Product

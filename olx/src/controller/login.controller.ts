@@ -33,6 +33,12 @@ export const login = async(req:Request , res: Response)=>
         if(comp){
          const token = jwt.sign({ userId: user.id }, 'secretKey');
          const isSession=await Session.findOne({where:{userId:user.id}})
+
+         if(isSession && isSession.status == false)
+         {
+          isSession.status = true ;
+          isSession.save()
+         }
          if(!isSession){
          const sess= await Session.create(
            {

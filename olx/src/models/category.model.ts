@@ -44,6 +44,6 @@ Category.init(
     }
 )
 
-Category.sync({force: true})
+//Category.sync({force: true})
 
 export default Category

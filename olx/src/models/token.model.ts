@@ -32,7 +32,7 @@ class Token extends Model {
     sequelize, 
     modelName: 'tokens' 
   });
-  //sequelize.sync({ force: true });
+  //Token.sync({ force: true });
 
   
   
